@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { colors, fonts } from '../../styles/tokens';
+import Icon from '../ui/Icon';
 
 const footerLinks = [
   { label: 'الرئيسية', href: '#hero' },
@@ -11,9 +12,9 @@ const footerLinks = [
 ];
 
 const contactInfo = [
-  { icon: '📞', text: '+966 55 787 5964' },
-  { icon: '✉', text: 'info@adalawfirm.com' },
-  { icon: '📍', text: 'ام الحمام - الرياض - المملكة العربية السعودية' },
+  { icon: 'phone', text: '+966 55 787 5964' },
+  { icon: 'mail', text: 'info@adalawfirm.com' },
+  { icon: 'mapPin', text: 'ام الحمام - الرياض - المملكة العربية السعودية' },
 ];
 
 export function Footer() {
@@ -141,7 +142,7 @@ export function Footer() {
             </p>
             {contactInfo.map((item, i) => (
               <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginBottom: 14 }}>
-                <span style={{ fontSize: 14 }}>{item.icon}</span>
+                <span style={{ fontSize: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', width: 16, height: 16 }}><Icon name={item.icon} size={14} color="#888880" /></span>
                 <span style={{ fontFamily: fonts.body, fontSize: 12, color: colors.muted, lineHeight: 1.6 }}>
                   {item.text}
                 </span>

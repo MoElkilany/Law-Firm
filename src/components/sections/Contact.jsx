@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { colors, fonts, transitions } from '../../styles/tokens';
 import { FadeIn, GoldLine, SectionLabel } from '../ui';
 import { Input, Textarea } from '../ui/Input';
+import Icon from '../ui/Icon';
 
 export function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', message: '' });
@@ -15,10 +16,10 @@ export function Contact() {
   };
 
   const contactInfo = [
-    { icon: '📞', label: 'الهاتف', text: '+966 55 787 5964' },
-    { icon: '✉', label: 'البريد الإلكتروني', text: 'info@adalawfirm.com' },
-    { icon: '📍', label: 'العنوان', text: 'ام الحمام - الرياض - المملكة العربية السعودية' },
-    { icon: '⏰', label: 'أوقات العمل', text: 'الأحد – الخميس: ٩ص – ٦م' },
+    { icon: 'phone', label: 'الهاتف', text: '+966 55 787 5964' },
+    { icon: 'mail', label: 'البريد الإلكتروني', text: 'info@adalawfirm.com' },
+    { icon: 'mapPin', label: 'العنوان', text: 'ام الحمام - الرياض - المملكة العربية السعودية' },
+    { icon: 'clock', label: 'أوقات العمل', text: 'الأحد – الخميس: ٩ص – ٦م' },
   ];
 
   return (
@@ -68,10 +69,9 @@ export function Contact() {
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center', 
-                  fontSize: 16, 
                   flexShrink: 0 
                 }}>
-                  {item.icon}
+                  <Icon name={item.icon} size={18} color="#C9A84C" />
                 </div>
                 <div>
                   <p style={{ 

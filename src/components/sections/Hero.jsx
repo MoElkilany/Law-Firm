@@ -5,8 +5,8 @@ import { FadeIn } from '../ui';
 export function Hero() {
   const stats = [
     { number: '١٥+', label: 'سنة خبرة' },
-    { number: '١٢٠٠+', label: 'قضية ناجحة' },
-    { number: '٩٨٪', label: 'نسبة الفوز' },
+    { number: '٥٠٠+', label: 'قضية ناجحة' },
+    { number: '٩٥٪', label: 'نسبة الفوز' },
     { number: '٤٨ ساعة', label: 'وقت الرد' },
   ];
 

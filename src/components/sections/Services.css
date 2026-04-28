@@ -94,11 +94,6 @@
   box-shadow: 0 4px 24px rgba(201,168,76,0.35);
 }
 
-.svc-card--active .svc-card__icon {
-  transform: scale(1.2);
-  filter: grayscale(0);
-}
-
 .svc-card--active .svc-card__corner-mark {
   opacity: 1;
 }
@@ -126,7 +121,17 @@
   margin-bottom: 28px;
   position: relative;
   z-index: 2;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #C9A84C;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svc-card__svg-icon {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.svc-card--active .svc-card__svg-icon {
+  transform: scale(1.2);
+  color: #0A0A0A;
 }
 
 .svc-card__icon {

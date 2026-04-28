@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { FadeIn, GoldLine, SectionLabel } from '../ui';
+import Icon from '../ui/Icon';
 import './Services.css';
 
 const services = [
-  { icon: '⚖', title: 'القضايا المدنية', desc: 'تمثيل قانوني متكامل في الدعاوى المدنية، التعويضات، والنزاعات التجارية والشخصية.' },
-  { icon: '🔒', title: 'القضايا الجنائية', desc: 'دفاع قوي وصارم في قضايا الجنايات والجنح مع ضمان جميع حقوق الدفاع القانوني.' },
-  { icon: '🏢', title: 'قانون الشركات', desc: 'تأسيس الشركات، وصياغة العقود التجارية، وتسوية النزاعات بين الشركاء.' },
-  { icon: '📝', title: 'صياغة العقود', desc: 'صياغة ومراجعة العقود القانونية بأعلى معايير الدقة لحماية مصالحك.' },
-  { icon: '🏠', title: 'العقارات والإيجارات', desc: 'تسوية النزاعات العقارية، توثيق عقود البيع والإيجار والتحكيم.' },
-  { icon: '👨‍👩‍👧', title: 'الأحوال الشخصية', desc: 'قضايا الأسرة، الطلاق، الحضانة، والميراث بتعامل إنساني وحكيم.' },
+  { icon: 'scales', title: 'القضايا المدنية', desc: 'تمثيل قانوني متكامل في الدعاوى المدنية، التعويضات، والنزاعات التجارية والشخصية.' },
+  { icon: 'shield', title: 'القضايا الجنائية', desc: 'دفاع قوي وصارم في قضايا الجنايات والجنح مع ضمان جميع حقوق الدفاع القانوني.' },
+  { icon: 'building', title: 'قانون الشركات', desc: 'تأسيس الشركات، وصياغة العقود التجارية، وتسوية النزاعات بين الشركاء.' },
+  { icon: 'document', title: 'صياغة العقود', desc: 'صياغة ومراجعة العقود القانونية بأعلى معايير الدقة لحماية مصالحك.' },
+  { icon: 'home', title: 'العقارات والإيجارات', desc: 'تسوية النزاعات العقارية، توثيق عقود البيع والإيجار والتحكيم.' },
+  { icon: 'family', title: 'الأحوال الشخصية', desc: 'قضايا الأسرة، الطلاق، الحضانة، والميراث بتعامل إنساني وحكيم.' },
 ];
 
 export function Services() {
@@ -49,7 +50,7 @@ function ServiceCard({ service }) {
       onMouseLeave={() => setHovered(false)}
     >
       <div className="svc-card__icon-wrap">
-        <span className="svc-card__icon">{service.icon}</span>
+        <Icon name={service.icon} size={22} color="currentColor" className="svc-card__svg-icon" />
       </div>
       <div className="svc-card__corner-mark" />
       <h3 className="svc-card__title">{service.title}</h3>

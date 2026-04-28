@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { FadeIn, GoldLine, SectionLabel } from '../ui';
+import Icon from '../ui/Icon';
 import './WhyUs.css';
 
 const points = [
-  { icon: '🎓', title: 'خبرة لا مثيل لها', desc: 'أكثر من ١٥ عاماً من الممارسة القانونية في أبرز المحاكم.' },
-  { icon: '⚡', title: 'سرعة الإنجاز', desc: 'نضمن الفصل في القضايا بسرعة دون المساس بجودة الدفاع.' },
-  { icon: '🔒', title: 'سرية تامة', desc: 'معلوماتك وقضيتك في مأمن تام وفق أعلى معايير الخصوصية.' },
-  { icon: '🏆', title: 'نتائج مضمونة', desc: 'نسبة نجاح ٩٨٪ عبر سجل حافل يتحدث عن نفسه.' },
-  { icon: '📞', title: 'تواصل مستمر', desc: 'على اطلاع دائم بكل مستجدات قضيتك على مدار الساعة.' },
-  { icon: '💎', title: 'تكاليف شفافة', desc: 'أتعاب واضحة بلا مفاجآت، وأولوية لمصلحة العميل دائماً.' },
+  { icon: 'graduation', title: 'خبرة لا مثيل لها', desc: 'أكثر من ١٥ عاماً من الممارسة القانونية في أبرز المحاكم.' },
+  { icon: 'bolt', title: 'سرعة الإنجاز', desc: 'نضمن الفصل في القضايا بسرعة دون المساس بجودة الدفاع.' },
+  { icon: 'lock', title: 'سرية تامة', desc: 'معلوماتك وقضيتك في مأمن تام وفق أعلى معايير الخصوصية.' },
+  { icon: 'trophy', title: 'نتائج مضمونة', desc: 'نسبة نجاح ٩٨٪ عبر سجل حافل يتحدث عن نفسه.' },
+  { icon: 'phone', title: 'تواصل مستمر', desc: 'على اطلاع دائم بكل مستجدات قضيتك على مدار الساعة.' },
+  { icon: 'diamond', title: 'تكاليف شفافة', desc: 'أتعاب واضحة بلا مفاجآت، وأولوية لمصلحة العميل دائماً.' },
 ];
 
 export function WhyUs() {
@@ -47,7 +48,7 @@ function ReasonCard({ point, index }) {
       onMouseLeave={() => setHovered(false)}
     >
       <div className="why-card__icon-wrap">
-        <span className="why-card__icon">{point.icon}</span>
+        <Icon name={point.icon} size={20} color="#C9A84C" />
       </div>
       <div className="why-card__text">
         <h3 className="why-card__title">{point.title}</h3>

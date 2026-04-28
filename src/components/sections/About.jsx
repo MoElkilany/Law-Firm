@@ -1,11 +1,12 @@
 import { colors, fonts } from '../../styles/tokens';
 import { FadeIn, GoldLine, SectionLabel } from '../ui';
+import Icon from '../ui/Icon';
 import personalImg from '../../assets/personal.jpeg';
 
 const strengths = [
-  { icon: '⚖', title: 'احترافية عالية', desc: 'نتعامل مع كل قضية بدقة ومهنية تضمن أفضل النتائج الممكنة.' },
-  { icon: '🤝', title: 'التزام راسخ', desc: 'نلتزم بالدفاع الكامل عن حقوقك في جميع مراحل التقاضي.' },
-  { icon: '🏆', title: 'نتائج مثبتة', desc: 'سجل حافل بالانتصارات في أبرز القضايا على مستوى المحاكم.' },
+  { icon: 'scales', title: 'احترافية عالية', desc: 'نتعامل مع كل قضية بدقة ومهنية تضمن أفضل النتائج الممكنة.' },
+  { icon: 'handshake', title: 'التزام راسخ', desc: 'نلتزم بالدفاع الكامل عن حقوقك في جميع مراحل التقاضي.' },
+  { icon: 'trophy', title: 'نتائج مثبتة', desc: 'سجل حافل بالانتصارات في أبرز القضايا على مستوى المحاكم.' },
 ];
 
 export function About() {
@@ -143,10 +144,9 @@ export function About() {
                       display: 'flex', 
                       alignItems: 'center', 
                       justifyContent: 'center', 
-                      flexShrink: 0, 
-                      fontSize: 18 
+                      flexShrink: 0
                     }}>
-                      {item.icon}
+                      <Icon name={item.icon} size={20} color="#C9A84C" />
                     </div>
                     <div>
                       <p style={{ 
