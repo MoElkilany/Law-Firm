@@ -22,9 +22,9 @@ export function Navbar() {
     left: 0,
     right: 0,
     zIndex: 1000,
-    background: scrolled ? 'rgba(10,10,10,0.97)' : 'transparent',
+    background: scrolled ? 'rgba(15,23,41,0.97)' : 'transparent',
     backdropFilter: scrolled ? 'blur(12px)' : 'none',
-    borderBottom: scrolled ? `1px solid ${colors.darkBorder}` : 'none',
+    borderBottom: scrolled ? `1px solid ${colors.navyBorder}` : 'none',
     transition: transitions.slow,
     padding: '0 5vw',
   };
@@ -42,7 +42,7 @@ export function Navbar() {
           <div style={{ 
             width: 36, 
             height: 36, 
-            border: `1.5px solid ${colors.gold}`, 
+            border: `1.5px solid ${colors.primary}`, 
             transform: 'rotate(45deg)', 
             display: 'flex', 
             alignItems: 'center', 
@@ -51,7 +51,7 @@ export function Navbar() {
             <span style={{ 
               transform: 'rotate(-45deg)', 
               fontFamily: fonts.display, 
-              color: colors.gold, 
+              color: colors.primary, 
               fontSize: 14, 
               fontWeight: 700 
             }}>
@@ -60,7 +60,7 @@ export function Navbar() {
           </div>
           <div>
             <p style={{ 
-              color: colors.offWhite, 
+              color: colors.white, 
               fontFamily: fonts.display, 
               fontSize: 18, 
               fontWeight: 700, 
@@ -70,7 +70,7 @@ export function Navbar() {
               مكتب العدالة
             </p>
             <p style={{ 
-              color: colors.gold, 
+              color: colors.primary, 
               fontSize: 9, 
               letterSpacing: '0.2em', 
               margin: 0, 
@@ -87,15 +87,15 @@ export function Navbar() {
               key={i} 
               href={link.href}
               style={{ 
-                color: colors.muted, 
+                color: colors.silver, 
                 fontSize: 13, 
                 textDecoration: 'none', 
                 fontFamily: fonts.body, 
                 transition: transitions.fast,
                 letterSpacing: '0.02em'
               }}
-              onMouseEnter={(e) => e.target.style.color = colors.gold}
-              onMouseLeave={(e) => e.target.style.color = colors.muted}
+              onMouseEnter={(e) => e.target.style.color = colors.primary}
+              onMouseLeave={(e) => e.target.style.color = colors.silver}
             >
               {link.label}
             </a>
@@ -106,8 +106,8 @@ export function Navbar() {
           href="#contact"
           style={{ 
             background: 'transparent', 
-            border: `1px solid ${colors.gold}`, 
-            color: colors.gold, 
+            border: `1px solid ${colors.primary}`, 
+            color: colors.primary, 
             padding: '8px 20px', 
             fontSize: 12, 
             fontFamily: fonts.body, 
@@ -115,8 +115,8 @@ export function Navbar() {
             letterSpacing: '0.08em', 
             transition: transitions.normal
           }}
-          onMouseEnter={(e) => { e.target.style.background = colors.gold; e.target.style.color = colors.dark; }}
-          onMouseLeave={(e) => { e.target.style.background = 'transparent'; e.target.style.color = colors.gold; }}
+          onMouseEnter={(e) => { e.target.style.background = colors.primary; e.target.style.color = colors.navy; }}
+          onMouseLeave={(e) => { e.target.style.background = 'transparent'; e.target.style.color = colors.primary; }}
         >
           احجز استشارة
         </a>

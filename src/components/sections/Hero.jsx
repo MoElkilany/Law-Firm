@@ -15,7 +15,7 @@ export function Hero() {
       id="hero" 
       style={{ 
         minHeight: '100vh', 
-        background: colors.dark, 
+        background: `linear-gradient(180deg, #0F1729 0%, #131E35 40%, #0F1729 100%)`, 
         position: 'relative', 
         display: 'flex', 
         alignItems: 'center', 
@@ -24,7 +24,7 @@ export function Hero() {
       <div style={{ 
         position: 'absolute', 
         inset: 0, 
-        backgroundImage: `linear-gradient(${colors.darkBorder} 1px, transparent 1px), linear-gradient(90deg, ${colors.darkBorder} 1px, transparent 1px)`, 
+        backgroundImage: `linear-gradient(${colors.navyBorder} 1px, transparent 1px), linear-gradient(90deg, ${colors.navyBorder} 1px, transparent 1px)`, 
         backgroundSize: '60px 60px', 
         opacity: 0.4 
       }} />
@@ -34,7 +34,7 @@ export function Hero() {
         right: '8%', 
         width: 300, 
         height: 300, 
-        border: `1px solid ${colors.gold}22`, 
+        border: `1px solid ${colors.primary}22`, 
         transform: 'rotate(45deg)', 
         borderRadius: 2 
       }} />
@@ -44,7 +44,7 @@ export function Hero() {
         right: '10%', 
         width: 220, 
         height: 220, 
-        border: `1px solid ${colors.gold}33`, 
+        border: `1px solid ${colors.primary}33`, 
         transform: 'rotate(45deg)', 
         borderRadius: 2 
       }} />
@@ -54,7 +54,7 @@ export function Hero() {
         left: '5%', 
         width: 180, 
         height: 180, 
-        border: `1px solid ${colors.gold}22`, 
+        border: `1px solid ${colors.primary}22`, 
         transform: 'rotate(45deg)', 
         borderRadius: 2 
       }} />
@@ -75,7 +75,7 @@ export function Hero() {
         <div>
           <FadeIn>
             <p style={{ 
-              color: colors.gold, 
+              color: colors.primary, 
               fontFamily: fonts.display, 
               letterSpacing: '0.4em', 
               fontSize: 11, 
@@ -93,11 +93,11 @@ export function Hero() {
               fontSize: 'clamp(44px, 7vw, 88px)', 
               fontWeight: 700, 
               lineHeight: 1.1, 
-              color: colors.offWhite, 
+              color: colors.white, 
               margin: '0 0 24px' 
             }}>
               العدالة تبدأ<br />
-              <span style={{ color: colors.gold }}>باختيار المحامي</span><br />
+              <span style={{ color: colors.primary }}>باختيار المحامي</span><br />
               الصحيح
             </h1>
           </FadeIn>
@@ -106,7 +106,7 @@ export function Hero() {
             <p style={{ 
               fontFamily: fonts.body, 
               fontSize: 17, 
-              color: colors.muted, 
+              color: colors.silver, 
               lineHeight: 1.9, 
               marginBottom: 48, 
               maxWidth: 580,
@@ -121,8 +121,8 @@ export function Hero() {
               <a 
                 href="#contact"
                 style={{ 
-                  background: colors.gold, 
-                  color: colors.dark, 
+                  background: colors.primary, 
+                  color: colors.navy, 
                   padding: '16px 36px', 
                   fontFamily: fonts.body, 
                   fontSize: 14, 
@@ -131,8 +131,8 @@ export function Hero() {
                   letterSpacing: '0.06em', 
                   transition: 'all 0.3s' 
                 }}
-                onMouseEnter={(e) => e.target.style.background = colors.goldLight}
-                onMouseLeave={(e) => e.target.style.background = colors.gold}
+                onMouseEnter={(e) => e.target.style.background = colors.primaryLight}
+                onMouseLeave={(e) => e.target.style.background = colors.primary}
               >
                 احجز استشارة مجانية
               </a>
@@ -140,8 +140,8 @@ export function Hero() {
                 href="#services"
                 style={{ 
                   background: 'transparent', 
-                  border: `1px solid ${colors.muted}55`, 
-                  color: colors.offWhite, 
+                  border: `1px solid ${colors.silver}55`, 
+                  color: colors.white, 
                   padding: '16px 36px', 
                   fontFamily: fonts.body, 
                   fontSize: 14, 
@@ -149,8 +149,8 @@ export function Hero() {
                   letterSpacing: '0.06em', 
                   transition: 'all 0.3s' 
                 }}
-                onMouseEnter={(e) => { e.target.style.borderColor = colors.gold; e.target.style.color = colors.gold; }}
-                onMouseLeave={(e) => { e.target.style.borderColor = `${colors.muted}55`; e.target.style.color = colors.offWhite; }}
+                onMouseEnter={(e) => { e.target.style.borderColor = colors.primary; e.target.style.color = colors.primary; }}
+                onMouseLeave={(e) => { e.target.style.borderColor = `${colors.silver}55`; e.target.style.color = colors.white; }}
               >
                 تعرّف على خدماتنا
               </a>
@@ -164,7 +164,7 @@ export function Hero() {
             gap: 48, 
             marginTop: 80, 
             paddingTop: 40, 
-            borderTop: `1px solid ${colors.darkBorder}`, 
+            borderTop: `1px solid ${colors.navyBorder}`, 
             flexWrap: 'wrap',
             justifyContent: 'center',
             width: '100%',
@@ -175,7 +175,7 @@ export function Hero() {
                   fontFamily: fonts.display, 
                   fontSize: 36, 
                   fontWeight: 700, 
-                  color: colors.gold, 
+                  color: colors.primary, 
                   margin: 0, 
                   lineHeight: 1 
                 }}>
@@ -184,7 +184,7 @@ export function Hero() {
                 <p style={{ 
                   fontFamily: fonts.body, 
                   fontSize: 12, 
-                  color: colors.muted, 
+                  color: colors.silver, 
                   margin: '4px 0 0', 
                   letterSpacing: '0.06em' 
                 }}>

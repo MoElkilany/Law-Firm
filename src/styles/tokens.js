@@ -1,22 +1,24 @@
-/**
- * Design Tokens - extracted from original law_firm_landing.jsx
- * Color palette for luxury law firm aesthetic
- */
-
 export const colors = {
-  // Gold palette
-  gold: '#C9A84C',
-  goldLight: '#E8C97A',
-  goldDark: '#9B7A2F',
-  
-  // Dark palette
-  dark: '#0A0A0A',
-  darkCard: '#111111',
-  darkBorder: '#1E1E1E',
-  
-  // Light palette
-  offWhite: '#F5F2EC',
-  muted: '#888880',
+  primary: '#D4A84B',
+  primaryLight: '#E8C97A',
+  primaryDark: '#B08930',
+
+  navy: '#0F1729',
+  navyLight: '#162038',
+  navyCard: '#182440',
+  navyBorder: '#243356',
+
+  white: '#F0EDE6',
+  silver: '#9BAAB8',
+  slate: '#6B7A8D',
+
+  accent: '#C75B4A',
+  accentSoft: 'rgba(199,91,74,0.12)',
+
+  gradientPrimary: 'linear-gradient(135deg, #D4A84B 0%, #E8C97A 50%, #B08930 100%)',
+  gradientDark: 'linear-gradient(180deg, #0F1729 0%, #162038 100%)',
+  gradientCard: 'linear-gradient(135deg, #182440 0%, #1E2D50 100%)',
+  gradientHero: 'radial-gradient(ellipse at 70% 30%, rgba(212,168,75,0.12) 0%, transparent 60%)',
 };
 
 export const spacing = {

@@ -22,8 +22,8 @@ export function Footer() {
 
   return (
     <footer style={{ 
-      background: '#080808', 
-      borderTop: `1px solid ${colors.darkBorder}`, 
+      background: 'linear-gradient(180deg, #0C1220 0%, #0F1826 50%, #0A0F18 100%)', 
+      borderTop: `1px solid ${colors.navyBorder}`, 
       padding: '60px 5vw 32px', 
       direction: 'rtl' 
     }}>
@@ -39,7 +39,7 @@ export function Footer() {
               <div style={{ 
                 width: 32, 
                 height: 32, 
-                border: `1.5px solid ${colors.gold}`, 
+                border: `1.5px solid ${colors.primary}`, 
                 transform: 'rotate(45deg)', 
                 display: 'flex', 
                 alignItems: 'center', 
@@ -48,7 +48,7 @@ export function Footer() {
                 <span style={{ 
                   transform: 'rotate(-45deg)', 
                   fontFamily: fonts.display, 
-                  color: colors.gold, 
+                  color: colors.primary, 
                   fontSize: 12, 
                   fontWeight: 700 
                 }}>
@@ -58,7 +58,7 @@ export function Footer() {
               <p style={{ 
                 fontFamily: fonts.display, 
                 fontSize: 18, 
-                color: colors.offWhite, 
+                color: colors.white, 
                 fontWeight: 700 
               }}>
                 مكتب العدالة للمحاماة
@@ -67,7 +67,7 @@ export function Footer() {
             <p style={{ 
               fontFamily: fonts.body, 
               fontSize: 13, 
-              color: colors.muted, 
+              color: colors.silver, 
               lineHeight: 1.9, 
               maxWidth: 280 
             }}>
@@ -81,17 +81,17 @@ export function Footer() {
                   style={{ 
                     width: 36, 
                     height: 36, 
-                    border: `1px solid ${colors.darkBorder}`, 
+                    border: `1px solid ${colors.navyBorder}`, 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center', 
-                    color: colors.muted, 
+                    color: colors.silver, 
                     textDecoration: 'none', 
                     fontSize: 13, 
                     transition: 'all 0.2s' 
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.gold; e.currentTarget.style.color = colors.gold; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.darkBorder; e.currentTarget.style.color = colors.muted; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.primary; e.currentTarget.style.color = colors.primary; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.navyBorder; e.currentTarget.style.color = colors.silver; }}
                 >
                   {s}
                 </a>
@@ -103,7 +103,7 @@ export function Footer() {
             <p style={{ 
               fontFamily: fonts.display, 
               fontSize: 16, 
-              color: colors.offWhite, 
+              color: colors.white, 
               marginBottom: 20, 
               fontWeight: 600 
             }}>
@@ -117,13 +117,13 @@ export function Footer() {
                   display: 'block', 
                   fontFamily: fonts.body, 
                   fontSize: 13, 
-                  color: colors.muted, 
+                  color: colors.silver, 
                   textDecoration: 'none', 
                   marginBottom: 10,
                   transition: 'color 0.2s' 
                 }}
-                onMouseEnter={(e) => e.target.style.color = colors.gold}
-                onMouseLeave={(e) => e.target.style.color = colors.muted}
+                onMouseEnter={(e) => e.target.style.color = colors.primary}
+                onMouseLeave={(e) => e.target.style.color = colors.silver}
               >
                 {link.label}
               </a>
@@ -134,7 +134,7 @@ export function Footer() {
             <p style={{ 
               fontFamily: fonts.display, 
               fontSize: 16, 
-              color: colors.offWhite, 
+              color: colors.white, 
               marginBottom: 20, 
               fontWeight: 600 
             }}>
@@ -142,8 +142,8 @@ export function Footer() {
             </p>
             {contactInfo.map((item, i) => (
               <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginBottom: 14 }}>
-                <span style={{ fontSize: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', width: 16, height: 16 }}><Icon name={item.icon} size={14} color="#888880" /></span>
-                <span style={{ fontFamily: fonts.body, fontSize: 12, color: colors.muted, lineHeight: 1.6 }}>
+                <span style={{ fontSize: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', width: 16, height: 16 }}><Icon name={item.icon} size={14} color="#9BAAB8" /></span>
+                <span style={{ fontFamily: fonts.body, fontSize: 12, color: colors.silver, lineHeight: 1.6 }}>
                   {item.text}
                 </span>
               </div>
@@ -152,7 +152,7 @@ export function Footer() {
         </div>
 
         <div style={{ 
-          borderTop: `1px solid ${colors.darkBorder}`, 
+          borderTop: `1px solid ${colors.navyBorder}`, 
           paddingTop: 24, 
           display: 'flex', 
           justifyContent: 'space-between', 
@@ -160,10 +160,10 @@ export function Footer() {
           flexWrap: 'wrap', 
           gap: 12 
         }}>
-          <p style={{ fontFamily: fonts.body, fontSize: 12, color: colors.muted }}>
+          <p style={{ fontFamily: fonts.body, fontSize: 12, color: colors.silver }}>
             © {currentYear} مكتب العدالة للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة.
           </p>
-          <p style={{ fontFamily: fonts.body, fontSize: 12, color: `${colors.muted}88` }}>
+          <p style={{ fontFamily: fonts.body, fontSize: 12, color: `${colors.silver}88` }}>
             سياسة الخصوصية · الشروط والأحكام
           </p>
         </div>

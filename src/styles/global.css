@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E8C97A;
-  --gold-dark: #9B7A2F;
-  --dark: #0A0A0A;
-  --dark-card: #111111;
-  --dark-border: #1E1E1E;
-  --off-white: #F5F2EC;
-  --muted: #888880;
+  --primary: #D4A84B;
+  --primary-light: #E8C97A;
+  --primary-dark: #B08930;
+
+  --navy: #0F1729;
+  --navy-light: #162038;
+  --navy-card: #182440;
+  --navy-border: #243356;
+
+  --white: #F0EDE6;
+  --silver: #9BAAB8;
+  --slate: #6B7A8D;
+
+  --accent: #C75B4A;
+  --accent-soft: rgba(199,91,74,0.12);
+
   --font-display: 'Tajawal', sans-serif;
   --font-body: 'Cairo', sans-serif;
 }
@@ -24,9 +32,9 @@ html {
 }
 
 body {
-  background: var(--dark);
+  background: var(--navy);
   font-family: var(--font-body);
-  color: var(--off-white);
+  color: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,6 +48,16 @@ a {
 button {
   font-family: inherit;
   cursor: pointer;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--navy);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 @keyframes fadeUp {

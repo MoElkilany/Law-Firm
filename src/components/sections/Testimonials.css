@@ -1,5 +1,5 @@
 .testimonials {
-  background: #0A0A0A;
+  background: linear-gradient(180deg, #0F1729 0%, #131E35 50%, #0F1729 100%);
   padding: clamp(80px, 10vw, 140px) 5vw;
   direction: rtl;
 }
@@ -18,7 +18,7 @@
   font-family: 'Tajawal', sans-serif;
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 700;
-  color: #F5F2EC;
+  color: #F0EDE6;
 }
 
 .testimonials__grid {
@@ -28,8 +28,8 @@
 }
 
 .test-card {
-  background: #0F0F0F;
-  border: 1px solid #1E1E1E;
+  background: #152038;
+  border: 1px solid #243356;
   padding: 36px 32px;
   position: relative;
   overflow: hidden;
@@ -45,26 +45,26 @@
   right: 0;
   width: 40px;
   height: 40px;
-  border-top: 1.5px solid #C9A84C30;
-  border-right: 1.5px solid #C9A84C30;
+  border-top: 1.5px solid #D4A84B30;
+  border-right: 1.5px solid #D4A84B30;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .test-card--hovered {
-  border-color: #C9A84C35;
+  border-color: #D4A84B35;
   transform: translateY(-3px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px #C9A84C10;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px #D4A84B10;
 }
 
 .test-card--hovered::before {
   width: 52px;
   height: 52px;
-  border-color: #C9A84C;
+  border-color: #D4A84B;
 }
 
 .test-card--hovered .test-card__avatar {
-  border-color: #C9A84C;
-  background: #C9A84C20;
+  border-color: #D4A84B;
+  background: #D4A84B20;
 }
 
 .test-card__stars {
@@ -74,7 +74,7 @@
 }
 
 .test-card__star {
-  color: #C9A84C;
+  color: #D4A84B;
   width: 20px;
   height: 20px;
 }
@@ -94,7 +94,7 @@
   font-family: 'Tajawal', sans-serif;
   font-size: 64px;
   font-weight: 700;
-  color: #C9A84C;
+  color: #D4A84B;
   opacity: 0.15;
   line-height: 0;
   vertical-align: -28px;
@@ -103,7 +103,7 @@
 }
 
 .test-card__author {
-  border-top: 1px solid #1E1E1E;
+  border-top: 1px solid #243356;
   padding-top: 16px;
   display: flex;
   align-items: center;
@@ -113,14 +113,14 @@
 .test-card__avatar {
   width: 48px;
   height: 48px;
-  background: #C9A84C15;
-  border: 1px solid #C9A84C30;
+  background: #D4A84B15;
+  border: 1px solid #D4A84B30;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Tajawal', sans-serif;
-  color: #C9A84C;
+  color: #D4A84B;
   font-size: 18px;
   font-weight: 700;
   flex-shrink: 0;
@@ -136,7 +136,7 @@
 .test-card__name {
   font-family: 'Tajawal', sans-serif;
   font-size: 17px;
-  color: #F5F2EC;
+  color: #F0EDE6;
   font-weight: 600;
   margin: 0;
 }
@@ -144,7 +144,7 @@
 .test-card__role {
   font-family: 'Cairo', sans-serif;
   font-size: 14px;
-  color: #888880;
+  color: #9BAAB8;
   margin: 0;
 }
 

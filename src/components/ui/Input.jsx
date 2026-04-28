@@ -2,9 +2,9 @@ import { colors, fonts, transitions } from '../../styles/tokens';
 
 const baseInputStyle = {
   width: '100%',
-  background: colors.darkCard,
-  border: `1px solid ${colors.darkBorder}`,
-  color: colors.offWhite,
+  background: colors.navyCard,
+  border: `1px solid ${colors.navyBorder}`,
+  color: colors.white,
   padding: '14px 16px',
   fontFamily: fonts.body,
   fontSize: 14,
@@ -28,8 +28,8 @@ export function Input({
       value={value}
       onChange={onChange}
       style={{ ...baseInputStyle, ...style }}
-      onFocus={(e) => e.target.style.borderColor = `${colors.gold}66`}
-      onBlur={(e) => e.target.style.borderColor = colors.darkBorder}
+      onFocus={(e) => e.target.style.borderColor = `${colors.primary}66`}
+      onBlur={(e) => e.target.style.borderColor = colors.navyBorder}
       {...props}
     />
   );
@@ -55,8 +55,8 @@ export function Textarea({
         marginBottom: 24,
         ...style 
       }}
-      onFocus={(e) => e.target.style.borderColor = `${colors.gold}66`}
-      onBlur={(e) => e.target.style.borderColor = colors.darkBorder}
+      onFocus={(e) => e.target.style.borderColor = `${colors.primary}66`}
+      onBlur={(e) => e.target.style.borderColor = colors.navyBorder}
       {...props}
     />
   );

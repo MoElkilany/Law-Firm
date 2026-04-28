@@ -4,7 +4,7 @@ import { Hero, About, Services, WhyUs, Testimonials, CTA, Contact } from './comp
 
 export default function App() {
   return (
-    <div style={{ background: colors.dark, minHeight: '100vh' }}>
+    <div style={{ background: colors.navy, minHeight: '100vh' }}>
       <Navbar />
       <Hero />
       <About />

@@ -1,5 +1,5 @@
 .why {
-  background: #0D0D0D;
+  background: linear-gradient(180deg, #0F1729 0%, #131E35 50%, #0F1729 100%);
   padding: clamp(80px, 10vw, 140px) 5vw;
   direction: rtl;
   position: relative;
@@ -13,7 +13,7 @@
   transform: translateX(-50%);
   width: 800px;
   height: 500px;
-  background: radial-gradient(ellipse, #C9A84C08 0%, transparent 65%);
+  background: radial-gradient(ellipse, #D4A84B08 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -33,14 +33,14 @@
   font-family: 'Tajawal', sans-serif;
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 700;
-  color: #F5F2EC;
+  color: #F0EDE6;
   margin-bottom: 12px;
 }
 
 .why__subtitle {
   font-family: 'Cairo', sans-serif;
   font-size: 15px;
-  color: #888880;
+  color: #9BAAB8;
   margin-top: 12px;
 }
 
@@ -55,24 +55,24 @@
   align-items: flex-start;
   gap: 20px;
   padding: 32px 28px;
-  background: #0D0D0D;
-  border: 1px solid #1A1A1A;
+  background: #0F1729;
+  border: 1px solid #1E2D4A;
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .why-card--active {
-  background: #111111;
-  border-color: #C9A84C33;
+  background: #182440;
+  border-color: #D4A84B33;
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px #C9A84C12;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px #D4A84B12;
 }
 
 .why-card--active .why-card__icon-wrap {
-  border-color: #C9A84C;
-  background: #C9A84C18;
-  box-shadow: 0 0 24px #C9A84C20;
+  border-color: #D4A84B;
+  background: #D4A84B18;
+  box-shadow: 0 0 24px #D4A84B20;
 }
 
 .why-card--active .why-card__icon {
@@ -88,7 +88,7 @@
   width: 52px;
   height: 52px;
   min-width: 52px;
-  border: 1px solid #C9A84C30;
+  border: 1px solid #D4A84B30;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +109,7 @@
 .why-card__title {
   font-family: 'Tajawal', sans-serif;
   font-size: 18px;
-  color: #F5F2EC;
+  color: #F0EDE6;
   font-weight: 600;
   margin-bottom: 8px;
   transition: color 0.3s;
@@ -122,7 +122,7 @@
 .why-card__desc {
   font-family: 'Cairo', sans-serif;
   font-size: 13px;
-  color: #888880;
+  color: #9BAAB8;
   line-height: 1.9;
 }
 
@@ -132,7 +132,7 @@
   right: 0;
   width: 3px;
   height: 0;
-  background: #C9A84C;
+  background: #D4A84B;
   transition: height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -140,8 +140,8 @@
   margin-top: 64px;
   display: flex;
   align-items: stretch;
-  background: #111111;
-  border: 1px solid #1A1A1A;
+  background: #182440;
+  border: 1px solid #1E2D4A;
   overflow: hidden;
 }
 
@@ -158,14 +158,14 @@
   font-family: 'Tajawal', sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #C9A84C;
+  color: #D4A84B;
   line-height: 1;
 }
 
 .why__proof-bar {
   width: 60px;
   height: 3px;
-  background: #1E1E1E;
+  background: #243356;
   display: block;
   position: relative;
   border-radius: 2px;
@@ -177,20 +177,20 @@
   right: 0;
   top: 0;
   height: 100%;
-  background: #C9A84C;
+  background: #D4A84B;
   border-radius: 2px;
 }
 
 .why__proof-label {
   font-family: 'Cairo', sans-serif;
   font-size: 12px;
-  color: #888880;
+  color: #9BAAB8;
   letter-spacing: 0.08em;
 }
 
 .why__proof-divider {
   width: 1px;
-  background: #1E1E1E;
+  background: #243356;
   align-self: stretch;
 }
 

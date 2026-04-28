@@ -23,19 +23,19 @@ export function Button({
 }) {
   const variants = {
     primary: {
-      background: colors.gold,
-      color: colors.dark,
-      border: `1px solid ${colors.gold}`,
+      background: colors.primary,
+      color: colors.navy,
+      border: `1px solid ${colors.primary}`,
     },
     secondary: {
       background: 'transparent',
-      color: colors.offWhite,
-      border: `1px solid ${colors.muted}55`,
+      color: colors.white,
+      border: `1px solid ${colors.silver}55`,
     },
     outline: {
       background: 'transparent',
-      color: colors.gold,
-      border: `1px solid ${colors.gold}`,
+      color: colors.primary,
+      border: `1px solid ${colors.primary}`,
     },
   };
 

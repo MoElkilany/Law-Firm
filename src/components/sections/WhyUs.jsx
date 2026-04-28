@@ -48,7 +48,7 @@ function ReasonCard({ point, index }) {
       onMouseLeave={() => setHovered(false)}
     >
       <div className="why-card__icon-wrap">
-        <Icon name={point.icon} size={20} color="#C9A84C" />
+        <Icon name={point.icon} size={20} color="#D4A84B" />
       </div>
       <div className="why-card__text">
         <h3 className="why-card__title">{point.title}</h3>

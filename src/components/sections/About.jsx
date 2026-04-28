@@ -14,7 +14,7 @@ export function About() {
     <section 
       id="about" 
       style={{ 
-        background: '#0D0D0D', 
+        background: 'linear-gradient(180deg, #0F1729 0%, #121D32 50%, #0F1729 100%)', 
         padding: '120px 5vw', 
         direction: 'rtl' 
       }}>
@@ -31,7 +31,7 @@ export function About() {
             <div style={{ 
               width: '100%', 
               aspectRatio: '4/5', 
-              border: `1px solid ${colors.darkBorder}`, 
+              border: `1px solid ${colors.navyBorder}`, 
               position: 'relative', 
               overflow: 'hidden' 
             }}>
@@ -48,7 +48,7 @@ export function About() {
               <div style={{ 
                 position: 'absolute', 
                 inset: 0, 
-                background: `linear-gradient(to bottom, transparent 40%, ${colors.dark}CC 100%)` 
+                background: `linear-gradient(to bottom, transparent 40%, ${colors.navy}CC 100%)` 
               }} />
             </div>
             <div style={{ 
@@ -57,7 +57,7 @@ export function About() {
               right: -20, 
               width: 120, 
               height: 120, 
-              border: `1px solid ${colors.gold}44`, 
+              border: `1px solid ${colors.primary}44`, 
               borderRadius: 2 
             }} />
             <div style={{ 
@@ -66,14 +66,14 @@ export function About() {
               left: -12, 
               width: 60, 
               height: 60, 
-              border: `1px solid ${colors.gold}55`, 
+              border: `1px solid ${colors.primary}55`, 
               borderRadius: 2 
             }} />
             <div style={{ 
               position: 'absolute', 
               bottom: 24, 
               left: -20, 
-              background: colors.gold, 
+              background: colors.primary, 
               padding: '16px 20px', 
               textAlign: 'center' 
             }}>
@@ -81,7 +81,7 @@ export function About() {
                 fontFamily: fonts.display, 
                 fontSize: 32, 
                 fontWeight: 700, 
-                color: colors.dark, 
+                color: colors.navy, 
                 lineHeight: 1, 
                 margin: 0 
               }}>
@@ -90,7 +90,7 @@ export function About() {
               <p style={{ 
                 fontFamily: fonts.body, 
                 fontSize: 10, 
-                color: colors.dark, 
+                color: colors.navy, 
                 letterSpacing: '0.1em', 
                 margin: 0 
               }}>
@@ -108,7 +108,7 @@ export function About() {
               fontFamily: fonts.display, 
               fontSize: 'clamp(32px, 4vw, 52px)', 
               fontWeight: 700, 
-              color: colors.offWhite, 
+              color: colors.white, 
               lineHeight: 1.2, 
               marginBottom: 20 
             }}>
@@ -117,7 +117,7 @@ export function About() {
             <p style={{ 
               fontFamily: fonts.body, 
               fontSize: 15, 
-              color: colors.muted, 
+              color: colors.silver, 
               lineHeight: 2, 
               marginBottom: 16 
             }}>
@@ -126,7 +126,7 @@ export function About() {
             <p style={{ 
               fontFamily: fonts.body, 
               fontSize: 15, 
-              color: colors.muted, 
+              color: colors.silver, 
               lineHeight: 2, 
               marginBottom: 40 
             }}>
@@ -140,19 +140,19 @@ export function About() {
                     <div style={{ 
                       width: 44, 
                       height: 44, 
-                      border: `1px solid ${colors.gold}44`, 
+                      border: `1px solid ${colors.primary}44`, 
                       display: 'flex', 
                       alignItems: 'center', 
                       justifyContent: 'center', 
                       flexShrink: 0
                     }}>
-                      <Icon name={item.icon} size={20} color="#C9A84C" />
+                      <Icon name={item.icon} size={20} color="#D4A84B" />
                     </div>
                     <div>
                       <p style={{ 
                         fontFamily: fonts.display, 
                         fontSize: 18, 
-                        color: colors.offWhite, 
+                        color: colors.white, 
                         fontWeight: 600, 
                         marginBottom: 4 
                       }}>
@@ -161,7 +161,7 @@ export function About() {
                       <p style={{ 
                         fontFamily: fonts.body, 
                         fontSize: 13, 
-                        color: colors.muted, 
+                        color: colors.silver, 
                         lineHeight: 1.7 
                       }}>
                         {item.desc}

@@ -1,5 +1,5 @@
 .svc {
-  background: #0A0A0A;
+  background: linear-gradient(180deg, #0F1729 0%, #131E35 50%, #0F1729 100%);
   padding: clamp(80px, 10vw, 140px) 5vw;
   direction: rtl;
   position: relative;
@@ -13,7 +13,7 @@
   transform: translateX(-50%);
   width: 900px;
   height: 500px;
-  background: radial-gradient(ellipse, #C9A84C08 0%, transparent 60%);
+  background: radial-gradient(ellipse, #D4A84B08 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -33,14 +33,14 @@
   font-family: 'Tajawal', sans-serif;
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 700;
-  color: #F5F2EC;
+  color: #F0EDE6;
   margin-bottom: 16px;
 }
 
 .svc__desc {
   font-family: 'Cairo', sans-serif;
   font-size: 15px;
-  color: #888880;
+  color: #9BAAB8;
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.9;
@@ -53,8 +53,8 @@
 }
 
 .svc-card {
-  background: #0F0F0F;
-  border: 1px solid #1E1E1E;
+  background: #152038;
+  border: 1px solid #243356;
   padding: 44px 32px 36px;
   position: relative;
   overflow: hidden;
@@ -71,17 +71,17 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, #C9A84C06 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 0%, #D4A84B06 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.5s;
   pointer-events: none;
 }
 
 .svc-card--active {
-  border-color: #C9A84C40;
+  border-color: #D4A84B40;
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px #C9A84C15;
-  background: #121212;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px #D4A84B15;
+  background: #1A2944;
 }
 
 .svc-card--active::before {
@@ -89,8 +89,8 @@
 }
 
 .svc-card--active .svc-card__icon-wrap {
-  border-color: #C9A84C;
-  background: #C9A84C;
+  border-color: #D4A84B;
+  background: #D4A84B;
   box-shadow: 0 4px 24px rgba(201,168,76,0.35);
 }
 
@@ -114,14 +114,14 @@
 .svc-card__icon-wrap {
   width: 56px;
   height: 56px;
-  border: 1px solid #C9A84C35;
+  border: 1px solid #D4A84B35;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 28px;
   position: relative;
   z-index: 2;
-  color: #C9A84C;
+  color: #D4A84B;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -131,7 +131,7 @@
 
 .svc-card--active .svc-card__svg-icon {
   transform: scale(1.2);
-  color: #0A0A0A;
+  color: #0F1729;
 }
 
 .svc-card__icon {
@@ -157,7 +157,7 @@
   right: 0;
   width: 100%;
   height: 1.5px;
-  background: #C9A84C;
+  background: #D4A84B;
 }
 
 .svc-card__corner-mark::after {
@@ -167,14 +167,14 @@
   right: 0;
   height: 100%;
   width: 1.5px;
-  background: #C9A84C;
+  background: #D4A84B;
 }
 
 .svc-card__title {
   font-family: 'Tajawal', sans-serif;
   font-size: 21px;
   font-weight: 700;
-  color: #F5F2EC;
+  color: #F0EDE6;
   margin-bottom: 12px;
   transition: color 0.3s;
   position: relative;
@@ -184,7 +184,7 @@
 .svc-card__desc {
   font-family: 'Cairo', sans-serif;
   font-size: 14px;
-  color: #888880;
+  color: #9BAAB8;
   line-height: 1.9;
   flex: 1;
   position: relative;
@@ -198,7 +198,7 @@
   margin-top: 24px;
   font-family: 'Cairo', sans-serif;
   font-size: 12px;
-  color: #C9A84C;
+  color: #D4A84B;
   letter-spacing: 0.06em;
   opacity: 0;
   transform: translateY(10px);
@@ -223,7 +223,7 @@
   left: 0;
   height: 2.5px;
   width: 0;
-  background: linear-gradient(90deg, #C9A84C, #E8C97A);
+  background: linear-gradient(90deg, #D4A84B, #E8C97A);
   transition: width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
 }

@@ -31,18 +31,18 @@ export function GoldLine() {
       <div style={{ 
         flex: 1, 
         height: 1, 
-        background: `linear-gradient(to right, transparent, ${colors.gold})` 
+        background: `linear-gradient(to right, transparent, ${colors.primary})` 
       }} />
       <div style={{ 
         width: 6, 
         height: 6, 
-        background: colors.gold, 
+        background: colors.primary, 
         transform: 'rotate(45deg)' 
       }} />
       <div style={{ 
         flex: 1, 
         height: 1, 
-        background: `linear-gradient(to left, transparent, ${colors.gold})` 
+        background: `linear-gradient(to left, transparent, ${colors.primary})` 
       }} />
     </div>
   );
@@ -54,7 +54,7 @@ export function SectionLabel({ text }) {
       fontFamily: fonts.display, 
       letterSpacing: '0.35em', 
       fontSize: 11, 
-      color: colors.gold, 
+      color: colors.primary, 
       textTransform: 'uppercase', 
       textAlign: 'center', 
       marginBottom: 16 

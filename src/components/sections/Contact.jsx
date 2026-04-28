@@ -26,7 +26,7 @@ export function Contact() {
     <section 
       id="contact" 
       style={{ 
-        background: '#0D0D0D', 
+        background: 'linear-gradient(180deg, #0F1729 0%, #121D32 50%, #0F1729 100%)', 
         padding: '120px 5vw', 
         direction: 'rtl' 
       }}>
@@ -45,7 +45,7 @@ export function Contact() {
               fontFamily: fonts.display, 
               fontSize: 'clamp(28px, 3.5vw, 44px)', 
               fontWeight: 700, 
-              color: colors.offWhite, 
+              color: colors.white, 
               marginBottom: 20 
             }}>
               نحن هنا لمساعدتك
@@ -53,7 +53,7 @@ export function Contact() {
             <p style={{ 
               fontFamily: fonts.body, 
               fontSize: 14, 
-              color: colors.muted, 
+              color: colors.silver, 
               lineHeight: 2, 
               marginBottom: 40 
             }}>
@@ -65,19 +65,19 @@ export function Contact() {
                 <div style={{ 
                   width: 44, 
                   height: 44, 
-                  border: `1px solid ${colors.gold}33`, 
+                  border: `1px solid ${colors.primary}33`, 
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center', 
                   flexShrink: 0 
                 }}>
-                  <Icon name={item.icon} size={18} color="#C9A84C" />
+                  <Icon name={item.icon} size={18} color="#D4A84B" />
                 </div>
                 <div>
                   <p style={{ 
                     fontFamily: fonts.body, 
                     fontSize: 11, 
-                    color: colors.gold, 
+                    color: colors.primary, 
                     letterSpacing: '0.1em', 
                     margin: '0 0 4px' 
                   }}>
@@ -86,7 +86,7 @@ export function Contact() {
                   <p style={{ 
                     fontFamily: fonts.body, 
                     fontSize: 14, 
-                    color: colors.offWhite 
+                    color: colors.white 
                   }}>
                     {item.text}
                   </p>
@@ -98,14 +98,14 @@ export function Contact() {
 
         <FadeIn delay={150}>
           <div style={{ 
-            background: colors.darkCard, 
-            border: `1px solid ${colors.darkBorder}`, 
+            background: colors.navyCard, 
+            border: `1px solid ${colors.navyBorder}`, 
             padding: '40px 36px' 
           }}>
             <p style={{ 
               fontFamily: fonts.display, 
               fontSize: 24, 
-              color: colors.offWhite, 
+              color: colors.white, 
               marginBottom: 28 
             }}>
               أرسل رسالتك
@@ -113,15 +113,15 @@ export function Contact() {
 
             {sent && (
               <div style={{ 
-                background: `${colors.gold}22`, 
-                border: `1px solid ${colors.gold}55`, 
+                background: `${colors.primary}22`, 
+                border: `1px solid ${colors.primary}55`, 
                 padding: '12px 16px', 
                 marginBottom: 20 
               }}>
                 <p style={{ 
                   fontFamily: fonts.body, 
                   fontSize: 13, 
-                  color: colors.gold 
+                  color: colors.primary 
                 }}>
                   ✓ تم إرسال رسالتك بنجاح، سنتواصل معك قريباً.
                 </p>
@@ -150,8 +150,8 @@ export function Contact() {
               onClick={handleSubmit}
               style={{ 
                 width: '100%', 
-                background: colors.gold, 
-                color: colors.dark, 
+                background: colors.primary, 
+                color: colors.navy, 
                 border: 'none', 
                 padding: '16px', 
                 fontFamily: fonts.body, 
@@ -161,8 +161,8 @@ export function Contact() {
                 letterSpacing: '0.06em', 
                 transition: transitions.normal 
               }}
-              onMouseEnter={(e) => e.target.style.background = colors.goldLight}
-              onMouseLeave={(e) => e.target.style.background = colors.gold}
+              onMouseEnter={(e) => e.target.style.background = colors.primaryLight}
+              onMouseLeave={(e) => e.target.style.background = colors.primary}
             >
               إرسال الرسالة
             </button>
@@ -170,7 +170,7 @@ export function Contact() {
             <p style={{ 
               fontFamily: fonts.body, 
               fontSize: 11, 
-              color: colors.muted, 
+              color: colors.silver, 
               textAlign: 'center', 
               marginTop: 16, 
               lineHeight: 1.8 
