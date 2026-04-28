@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { colors, fonts } from '../../styles/tokens';
 import { FadeIn, GoldLine, SectionLabel } from '../ui';
+import './WhyUs.css';
 
 const points = [
-  { icon: '🎓', title: 'خبرة لا مثيل لها', desc: 'أكثر من ٣٠ عاماً من الممارسة القانونية في أبرز المحاكم.' },
+  { icon: '🎓', title: 'خبرة لا مثيل لها', desc: 'أكثر من ١٥ عاماً من الممارسة القانونية في أبرز المحاكم.' },
   { icon: '⚡', title: 'سرعة الإنجاز', desc: 'نضمن الفصل في القضايا بسرعة دون المساس بجودة الدفاع.' },
   { icon: '🔒', title: 'سرية تامة', desc: 'معلوماتك وقضيتك في مأمن تام وفق أعلى معايير الخصوصية.' },
   { icon: '🏆', title: 'نتائج مضمونة', desc: 'نسبة نجاح ٩٨٪ عبر سجل حافل يتحدث عن نفسه.' },
@@ -13,37 +13,22 @@ const points = [
 
 export function WhyUs() {
   return (
-    <section 
-      id="why" 
-      style={{ 
-        background: '#0D0D0D', 
-        padding: '120px 5vw', 
-        direction: 'rtl' 
-      }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+    <section id="why" className="why">
+      <div className="why__glow" />
+      <div className="why__inner">
         <FadeIn>
-          <div style={{ textAlign: 'center', marginBottom: 64 }}>
+          <div className="why__header">
             <SectionLabel text="لماذا تختارنا" />
             <GoldLine />
-            <h2 style={{ 
-              fontFamily: fonts.display, 
-              fontSize: 'clamp(32px, 4vw, 52px)', 
-              fontWeight: 700, 
-              color: colors.offWhite 
-            }}>
-              الفرق يكمن في التفاصيل
-            </h2>
+            <h2 className="why__title">الفرق يكمن في التفاصيل</h2>
+            <p className="why__subtitle">ستة أسباب تجعل عملاءنا يثقون بنا في كل قضية</p>
           </div>
         </FadeIn>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-          gap: 24 
-        }}>
+        <div className="why__grid">
           {points.map((point, i) => (
-            <FadeIn key={i} delay={i * 80}>
-              <WhyCard point={point} />
+            <FadeIn key={i} delay={i * 100}>
+              <ReasonCard point={point} index={i} />
             </FadeIn>
           ))}
         </div>
@@ -52,51 +37,23 @@ export function WhyUs() {
   );
 }
 
-function WhyCard({ point }) {
+function ReasonCard({ point, index }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div 
-      style={{ 
-        textAlign: 'center', 
-        padding: '40px 24px', 
-        background: hovered ? `${colors.gold}06` : 'transparent',
-        transition: 'background 0.3s' 
-      }}
+    <div
+      className={`why-card ${hovered ? 'why-card--active' : ''}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div style={{ 
-        width: 64, 
-        height: 64, 
-        border: `1px solid ${colors.gold}33`, 
-        margin: '0 auto 20px', 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        fontSize: 24, 
-        borderRadius: '50%' 
-      }}>
-        {point.icon}
+      <div className="why-card__icon-wrap">
+        <span className="why-card__icon">{point.icon}</span>
       </div>
-      <div style={{ width: 40, height: 1, background: colors.gold, margin: '0 auto 16px' }} />
-      <p style={{ 
-        fontFamily: fonts.display, 
-        fontSize: 20, 
-        color: colors.offWhite, 
-        fontWeight: 600, 
-        marginBottom: 10 
-      }}>
-        {point.title}
-      </p>
-      <p style={{ 
-        fontFamily: fonts.body, 
-        fontSize: 13, 
-        color: colors.muted, 
-        lineHeight: 1.8 
-      }}>
-        {point.desc}
-      </p>
+      <div className="why-card__text">
+        <h3 className="why-card__title">{point.title}</h3>
+        <p className="why-card__desc">{point.desc}</p>
+      </div>
+      <div className="why-card__accent" />
     </div>
   );
 }

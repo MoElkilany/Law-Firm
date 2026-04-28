@@ -4,7 +4,7 @@ import { FadeIn } from '../ui';
 
 export function Hero() {
   const stats = [
-    { number: '٣٠+', label: 'سنة خبرة' },
+    { number: '١٥+', label: 'سنة خبرة' },
     { number: '١٢٠٠+', label: 'قضية ناجحة' },
     { number: '٩٨٪', label: 'نسبة الفوز' },
     { number: '٤٨ ساعة', label: 'وقت الرد' },
@@ -66,9 +66,13 @@ export function Hero() {
         maxWidth: 1200, 
         margin: '0 auto', 
         padding: '120px 5vw 80px', 
-        direction: 'rtl' 
+        direction: 'rtl',
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       }}>
-        <div style={{ maxWidth: 680 }}>
+        <div>
           <FadeIn>
             <p style={{ 
               color: colors.gold, 
@@ -79,7 +83,7 @@ export function Hero() {
               marginBottom: 24, 
               opacity: 0.9 
             }}>
-              مكتب محاماة متخصص منذ ١٩٩٥
+              مكتب محاماة متخصص منذ ٢٠١٠
             </p>
           </FadeIn>
           
@@ -105,14 +109,15 @@ export function Hero() {
               color: colors.muted, 
               lineHeight: 1.9, 
               marginBottom: 48, 
-              maxWidth: 520 
+              maxWidth: 580,
+              margin: '0 auto 48px auto',
             }}>
-              خبرة قانونية تمتد لأكثر من ٣٠ عاماً في الدفاع عن حقوق عملائنا بمهنية عالية وسرية تامة وتحقيق النتائج.
+              خبرة قانونية تمتد لأكثر من ١٥ عاماً في الدفاع عن حقوق عملائنا بمهنية عالية وسرية تامة وتحقيق النتائج.
             </p>
           </FadeIn>
 
           <FadeIn delay={600}>
-            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center' }}>
               <a 
                 href="#contact"
                 style={{ 
@@ -160,10 +165,12 @@ export function Hero() {
             marginTop: 80, 
             paddingTop: 40, 
             borderTop: `1px solid ${colors.darkBorder}`, 
-            flexWrap: 'wrap' 
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            width: '100%',
           }}>
             {stats.map((stat, i) => (
-              <div key={i} style={{ direction: 'rtl' }}>
+              <div key={i} style={{ direction: 'rtl', textAlign: 'center' }}>
                 <p style={{ 
                   fontFamily: fonts.display, 
                   fontSize: 36, 

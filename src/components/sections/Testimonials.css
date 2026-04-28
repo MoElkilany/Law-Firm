@@ -1,0 +1,158 @@
+.testimonials {
+  background: #0A0A0A;
+  padding: clamp(80px, 10vw, 140px) 5vw;
+  direction: rtl;
+}
+
+.testimonials__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.testimonials__title {
+  font-family: 'Tajawal', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: #F5F2EC;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.test-card {
+  background: #0F0F0F;
+  border: 1px solid #1E1E1E;
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.test-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-top: 1.5px solid #C9A84C30;
+  border-right: 1.5px solid #C9A84C30;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.test-card--hovered {
+  border-color: #C9A84C35;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px #C9A84C10;
+}
+
+.test-card--hovered::before {
+  width: 52px;
+  height: 52px;
+  border-color: #C9A84C;
+}
+
+.test-card--hovered .test-card__avatar {
+  border-color: #C9A84C;
+  background: #C9A84C20;
+}
+
+.test-card__stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 20px;
+}
+
+.test-card__star {
+  color: #C9A84C;
+  width: 20px;
+  height: 20px;
+}
+
+.test-card__quote {
+  font-family: 'Cairo', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: #EAE6DE;
+  line-height: 2;
+  margin-bottom: 28px;
+  flex: 1;
+  position: relative;
+}
+
+.test-card__quote-mark {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #C9A84C;
+  opacity: 0.15;
+  line-height: 0;
+  vertical-align: -28px;
+  margin-left: 4px;
+  display: inline;
+}
+
+.test-card__author {
+  border-top: 1px solid #1E1E1E;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.test-card__avatar {
+  width: 48px;
+  height: 48px;
+  background: #C9A84C15;
+  border: 1px solid #C9A84C30;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Tajawal', sans-serif;
+  color: #C9A84C;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.test-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.test-card__name {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 17px;
+  color: #F5F2EC;
+  font-weight: 600;
+  margin: 0;
+}
+
+.test-card__role {
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  color: #888880;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+  .test-card {
+    padding: 28px 24px;
+  }
+}

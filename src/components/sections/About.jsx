@@ -1,5 +1,6 @@
 import { colors, fonts } from '../../styles/tokens';
 import { FadeIn, GoldLine, SectionLabel } from '../ui';
+import personalImg from '../../assets/personal.jpeg';
 
 const strengths = [
   { icon: '⚖', title: 'احترافية عالية', desc: 'نتعامل مع كل قضية بدقة ومهنية تضمن أفضل النتائج الممكنة.' },
@@ -29,28 +30,25 @@ export function About() {
             <div style={{ 
               width: '100%', 
               aspectRatio: '4/5', 
-              background: colors.darkCard, 
               border: `1px solid ${colors.darkBorder}`, 
               position: 'relative', 
               overflow: 'hidden' 
             }}>
+              <img 
+                src={personalImg} 
+                alt="المحامي أ/سيد الكيلاني" 
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  objectFit: 'cover', 
+                  display: 'block' 
+                }} 
+              />
               <div style={{ 
                 position: 'absolute', 
                 inset: 0, 
-                background: `linear-gradient(to bottom, transparent 60%, ${colors.dark}88 100%)` 
+                background: `linear-gradient(to bottom, transparent 40%, ${colors.dark}CC 100%)` 
               }} />
-              <div style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                fontFamily: fonts.display,
-                fontSize: 120,
-                color: `${colors.gold}15`,
-                fontWeight: 700,
-              }}>
-ع
-              </div>
             </div>
             <div style={{ 
               position: 'absolute', 
@@ -86,7 +84,7 @@ export function About() {
                 lineHeight: 1, 
                 margin: 0 
               }}>
-                ٣٠
+                ١٥
               </p>
               <p style={{ 
                 fontFamily: fonts.body, 
@@ -113,7 +111,7 @@ export function About() {
               lineHeight: 1.2, 
               marginBottom: 20 
             }}>
-              أكثر من ثلاثة عقود<br />في خدمة العدالة
+              أكثر من عقدين <br />في خدمة العدالة
             </h2>
             <p style={{ 
               fontFamily: fonts.body, 
@@ -122,7 +120,7 @@ export function About() {
               lineHeight: 2, 
               marginBottom: 16 
             }}>
-              تأسس مكتب العدالة للمحاماة عام ١٩٩٥ على يد المستشار القانوني أ. عادل العمراني، ليكون منذ ذلك الحين رمزاً للنزاهة والكفاءة في عالم القانون.
+              تأسس مكتب العدالة للمحاماة عام ٢٠١٠، علي يد المحامي أ/سيد الكيلاني، ليكون منذ ذلك الحين رمزاً للنزاهة والكفاءة في عالم القانون.
             </p>
             <p style={{ 
               fontFamily: fonts.body, 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { colors, fonts } from '../../styles/tokens';
 import { FadeIn, GoldLine, SectionLabel } from '../ui';
+import './Testimonials.css';
 
 const reviews = [
   { name: 'أحمد المنصوري', role: 'رجل أعمال', text: 'تعاملت مع مكتب العدالة في قضية تجارية معقدة وكانت النتيجة أفضل مما توقعت. الاحترافية والسرعة في العمل أمر لافت للنظر حقاً.', stars: 5 },
@@ -11,37 +11,20 @@ const reviews = [
 
 export function Testimonials() {
   return (
-    <section 
-      id="testimonials" 
-      style={{ 
-        background: colors.dark, 
-        padding: '120px 5vw', 
-        direction: 'rtl' 
-      }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+    <section id="testimonials" className="testimonials">
+      <div className="testimonials__inner">
         <FadeIn>
-          <div style={{ textAlign: 'center', marginBottom: 64 }}>
+          <div className="testimonials__header">
             <SectionLabel text="آراء عملائنا" />
             <GoldLine />
-            <h2 style={{ 
-              fontFamily: fonts.display, 
-              fontSize: 'clamp(32px, 4vw, 52px)', 
-              fontWeight: 700, 
-              color: colors.offWhite 
-            }}>
-              ثقة تبنى على الإنجاز
-            </h2>
+            <h2 className="testimonials__title">ثقة تبنى على الإنجاز</h2>
           </div>
         </FadeIn>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-          gap: 24 
-        }}>
+        <div className="testimonials__grid">
           {reviews.map((review, i) => (
-            <FadeIn key={i} delay={i * 80}>
-              <ReviewCard review={review} index={i} />
+            <FadeIn key={i} delay={i * 100}>
+              <ReviewCard review={review} />
             </FadeIn>
           ))}
         </div>
@@ -50,78 +33,31 @@ export function Testimonials() {
   );
 }
 
-function ReviewCard({ review, index }) {
-  const [active, setActive] = useState(false);
+function ReviewCard({ review }) {
+  const [hovered, setHovered] = useState(false);
 
   return (
-    <div 
-      style={{ 
-        background: colors.darkCard, 
-        border: `1px solid ${active ? `${colors.gold}55` : colors.darkBorder}`, 
-        padding: '36px 28px', 
-        transition: 'all 0.3s', 
-        cursor: 'pointer' 
-      }}
-      onClick={() => setActive(!active)}
-      onMouseEnter={(e) => e.currentTarget.style.borderColor = `${colors.gold}55`}
-      onMouseLeave={(e) => e.currentTarget.style.borderColor = colors.darkBorder}
+    <div
+      className={`test-card ${hovered ? 'test-card--hovered' : ''}`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <div style={{ display: 'flex', gap: 2, marginBottom: 20 }}>
+      <div className="test-card__stars">
         {[...Array(review.stars)].map((_, j) => (
-          <span key={j} style={{ color: colors.gold, fontSize: 14 }}>★</span>
+          <svg key={j} width="16" height="16" viewBox="0 0 16 16" className="test-card__star">
+            <path d="M8 1.5L9.8 5.8L14.5 6.3L11 9.5L11.9 14.2L8 12L4.1 14.2L5 9.5L1.5 6.3L6.2 5.8L8 1.5Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5"/>
+          </svg>
         ))}
       </div>
-      <p style={{ 
-        fontFamily: fonts.display, 
-        fontSize: 18, 
-        color: colors.offWhite, 
-        lineHeight: 1.8, 
-        fontStyle: 'italic', 
-        marginBottom: 24 
-      }}>
-        "{review.text}"
-      </p>
-      <div style={{ 
-        borderTop: `1px solid ${colors.darkBorder}`, 
-        paddingTop: 16, 
-        display: 'flex', 
-        alignItems: 'center', 
-        gap: 12 
-      }}>
-        <div style={{ 
-          width: 40, 
-          height: 40, 
-          background: `${colors.gold}22`, 
-          border: `1px solid ${colors.gold}44`, 
-          borderRadius: '50%', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          fontFamily: fonts.display, 
-          color: colors.gold, 
-          fontSize: 16, 
-          fontWeight: 700 
-        }}>
-          {review.name[0]}
-        </div>
-        <div>
-          <p style={{ 
-            fontFamily: fonts.body, 
-            fontSize: 13, 
-            color: colors.offWhite, 
-            fontWeight: 600, 
-            margin: 0 
-          }}>
-            {review.name}
-          </p>
-          <p style={{ 
-            fontFamily: fonts.body, 
-            fontSize: 11, 
-            color: colors.muted, 
-            margin: 0 
-          }}>
-            {review.role}
-          </p>
+      <blockquote className="test-card__quote">
+        <span className="test-card__quote-mark">"</span>
+        {review.text}
+      </blockquote>
+      <div className="test-card__author">
+        <div className="test-card__avatar">{review.name[0]}</div>
+        <div className="test-card__info">
+          <p className="test-card__name">{review.name}</p>
+          <p className="test-card__role">{review.role}</p>
         </div>
       </div>
     </div>

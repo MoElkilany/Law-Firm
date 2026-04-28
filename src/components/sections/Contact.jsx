@@ -15,9 +15,9 @@ export function Contact() {
   };
 
   const contactInfo = [
-    { icon: '📞', label: 'الهاتف', text: '+966 11 234 5678' },
+    { icon: '📞', label: 'الهاتف', text: '+966 55 787 5964' },
     { icon: '✉', label: 'البريد الإلكتروني', text: 'info@adalawfirm.com' },
-    { icon: '📍', label: 'العنوان', text: 'برج العدالة، الدور ١٥، الرياض' },
+    { icon: '📍', label: 'العنوان', text: 'ام الحمام - الرياض - المملكة العربية السعودية' },
     { icon: '⏰', label: 'أوقات العمل', text: 'الأحد – الخميس: ٩ص – ٦م' },
   ];
 

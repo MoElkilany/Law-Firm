@@ -11,9 +11,9 @@ const footerLinks = [
 ];
 
 const contactInfo = [
-  { icon: '📞', text: '+966 11 234 5678' },
+  { icon: '📞', text: '+966 55 787 5964' },
   { icon: '✉', text: 'info@adalawfirm.com' },
-  { icon: '📍', text: 'الرياض، المملكة العربية السعودية' },
+  { icon: '📍', text: 'ام الحمام - الرياض - المملكة العربية السعودية' },
 ];
 
 export function Footer() {
@@ -70,7 +70,7 @@ export function Footer() {
               lineHeight: 1.9, 
               maxWidth: 280 
             }}>
-              نمثّل العدالة بخبرة وشغف منذ ١٩٩٥. التزامنا بعملائنا لا حدود له.
+              نمثّل العدالة بخبرة وشغف منذ ٢٠١٠. التزامنا بعملائنا لا حدود له.
             </p>
             <div style={{ display: 'flex', gap: 12, marginTop: 20 }}>
               {['𝕏', 'in', 'f', '📱'].map((s, i) => (

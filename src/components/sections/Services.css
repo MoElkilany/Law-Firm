@@ -1,0 +1,239 @@
+.svc {
+  background: #0A0A0A;
+  padding: clamp(80px, 10vw, 140px) 5vw;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+}
+
+.svc__glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse, #C9A84C08 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.svc__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.svc__header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.svc__title {
+  font-family: 'Tajawal', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: #F5F2EC;
+  margin-bottom: 16px;
+}
+
+.svc__desc {
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px;
+  color: #888880;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+.svc__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.svc-card {
+  background: #0F0F0F;
+  border: 1px solid #1E1E1E;
+  padding: 44px 32px 36px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svc-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, #C9A84C06 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.svc-card--active {
+  border-color: #C9A84C40;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px #C9A84C15;
+  background: #121212;
+}
+
+.svc-card--active::before {
+  opacity: 1;
+}
+
+.svc-card--active .svc-card__icon-wrap {
+  border-color: #C9A84C;
+  background: #C9A84C;
+  box-shadow: 0 4px 24px rgba(201,168,76,0.35);
+}
+
+.svc-card--active .svc-card__icon {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+
+.svc-card--active .svc-card__corner-mark {
+  opacity: 1;
+}
+
+.svc-card--active .svc-card__title {
+  color: #FFFFFF;
+}
+
+.svc-card--active .svc-card__stroke {
+  width: 100%;
+}
+
+.svc-card--active .svc-card__cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.svc-card__icon-wrap {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #C9A84C35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.svc-card__icon {
+  font-size: 24px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.svc-card__corner-mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 1;
+}
+
+.svc-card__corner-mark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #C9A84C;
+}
+
+.svc-card__corner-mark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1.5px;
+  background: #C9A84C;
+}
+
+.svc-card__title {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #F5F2EC;
+  margin-bottom: 12px;
+  transition: color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.svc-card__desc {
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  color: #888880;
+  line-height: 1.9;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.svc-card__cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 12px;
+  color: #C9A84C;
+  letter-spacing: 0.06em;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.svc-card__arrow {
+  transform: scaleX(-1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svc-card--active .svc-card__arrow {
+  transform: scaleX(-1) translateX(4px);
+}
+
+.svc-card__stroke {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 2.5px;
+  width: 0;
+  background: linear-gradient(90deg, #C9A84C, #E8C97A);
+  transition: width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .svc__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .svc__grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-card {
+    padding: 32px 24px 28px;
+  }
+}
